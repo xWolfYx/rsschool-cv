@@ -8,4 +8,8 @@
    - SEO
 5. Experience: I have made some tasks on CS50x of Harward University online program. I have some experience in algorithms and complex tasks in C language.
 6. I have learned coding from W3Schools mainly but I also have made projects on FreeCodeCamp and CodeAcademy platforms.
-7. English Language Proficiency: Reading: C1. Comprehension: C1. Speaking: B2. English is not my main language but I studied it in school and in Univercity. The official level I have is B2 but i have much higher level of comprehension and reading as I'm reading books only in English.
+7. English Language Proficiency:
+   - Reading: C1
+   - Comprehension: C1
+   - Speaking: B2
+   - English is not my main language but I studied it in school and in Univercity. The official level I have is B2 but i have much higher level of comprehension and reading as I'm reading books only in English.
