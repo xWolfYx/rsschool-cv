@@ -15,5 +15,6 @@
    - Comprehension: C1
    - Speaking: B2
    - English is not my main language but I studied it in school and in Univercity. The official level I have is B2 but i have much higher level of comprehension and reading as I'm reading books only in English.
-     > [!NOTE]
-     > Information about personalia is not real and shouldn't be considered when trying to contact me.
+
+> [!NOTE]
+> Information about personalia is not real and shouldn't be considered when trying to contact me.
