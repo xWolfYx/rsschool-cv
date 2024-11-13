@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 20px;
+}
+
 * {
   /* basic reset */
   box-sizing: border-box;
@@ -189,6 +193,10 @@ img {
 }
 
 @media screen and (max-width: 1024px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+
   nav {
     position: sticky;
     width: 100%;
