@@ -13,9 +13,11 @@ html {
 }
 
 * :not(a) {
+  /* default cursor on text */
   cursor: default;
 }
 
+/* color variables */
 :root {
   --main-color: #0d1117;
   --main-color-hover: #1f2937;
@@ -29,10 +31,9 @@ html {
 
 body {
   background-color: var(--main-color);
-  color: var(--body-text);
-  line-height: 1.8em;
 
   /* font properties */
+  color: var(--body-text);
   font-family:
     system-ui,
     -apple-system,
@@ -46,6 +47,7 @@ body {
     "Helvetica Neue",
     sans-serif;
   font-size: 1.25em;
+  line-height: 1.8em;
 }
 
 .centered {
@@ -151,14 +153,13 @@ a:hover {
 
 footer {
   margin-top: 40px;
-  /* padding: 40px; */
+  padding: 40px;
   background-color: #f0f6fc;
   color: black;
   font-weight: bold;
   font-size: 2em;
   text-align: center;
   min-width: 720px;
-  padding: 40px;
 }
 
 footer a {
@@ -192,6 +193,7 @@ img {
   transform: scale(1.2);
 }
 
+/* responsive */
 @media screen and (max-width: 1024px) {
   html {
     scroll-padding-top: 60px;
