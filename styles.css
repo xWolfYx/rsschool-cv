@@ -203,9 +203,9 @@ img {
     position: sticky;
     width: 100%;
     min-width: 720px;
-    border: none;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--border-color);
     overflow: hidden;
     margin-bottom: 20px;
   }
