@@ -55,9 +55,9 @@ header {
 }
 
 nav {
-  background-color: var(--nav-color);
   position: sticky;
   top: 0;
+  background-color: var(--nav-color);
   border-width: 1px 0;
   border-style: solid;
   border-color: var(--border-color);
@@ -308,5 +308,18 @@ img {
   #rsschool-logo:hover {
     transition: 1s;
     transform: scale(1.1);
+  }
+}
+
+/* bigger screen */
+@media screen and (min-width: 1441px) {
+  html {
+    font-size: 1.8em;
+  }
+  nav {
+    width: 16%;
+  }
+  nav a {
+    padding: 30px;
   }
 }
