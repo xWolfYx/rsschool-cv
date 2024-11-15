@@ -100,7 +100,7 @@ main h2 {
 
 main h2,
 main h3,
-p,
+main > p,
 .note {
   margin: 0.4em 1em;
 }
@@ -237,7 +237,7 @@ img {
   }
   main h2,
   main h3,
-  p,
+  main > p,
   div.note {
     margin: 0.8em 2em;
   }
