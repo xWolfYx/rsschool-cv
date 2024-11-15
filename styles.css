@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 5em;
+  scroll-padding-top: 4em;
 }
 
 * {
@@ -14,14 +14,18 @@ html {
 
 /* color variables */
 :root {
+  --nav-color: #010409;
+  --nav-color-hover: #1f2937;
   --main-color: #0d1117;
-  --main-color-hover: #1f2937;
   --cv-items: #4493f8;
   --links: #4493f8;
   --link-hover: #75affa;
   --note: #4493f8;
   --border-color: #3d444d;
   --body-text: #f0f6fc;
+  --footer-bg-color: #f8fafc;
+  --footer-links: #4d76ff;
+  --footer-links-hover: #003afa;
 }
 
 body {
@@ -41,7 +45,7 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 2em;
 }
 
@@ -51,7 +55,7 @@ header {
 }
 
 nav {
-  background-color: var(--main-color);
+  background-color: var(--nav-color);
   position: sticky;
   top: 0;
   border-width: 1px 0;
@@ -71,11 +75,10 @@ nav ul {
 
 nav li {
   transition: 0.4s;
-  border-right: 1px solid var(--border-color);
 }
 
 nav li:hover {
-  background-color: var(--main-color-hover);
+  background-color: var(--nav-color-hover);
   transition: 0.4s;
 }
 
@@ -102,11 +105,12 @@ main h2,
 main h3,
 main > p,
 .note {
-  margin: 0.4em 1em;
+  margin: 0.4em 5%;
 }
 
 main > p {
   text-indent: 1.4em;
+  text-align: justify;
 }
 
 main ul {
@@ -128,19 +132,22 @@ a {
 a:hover {
   color: var(--link-hover);
 }
+
 .note {
+  margin: 2em;
   border-left: 5px solid var(--cv-items);
 }
 
 .note-header {
-  padding-left: 2em;
+  padding-left: 1em;
   font-weight: bold;
   color: var(--cv-items);
 }
 
 .note-text {
-  padding-left: 2em;
+  padding: 0.5em 1em;
   font-size: 1.2em;
+  text-align: justify;
 }
 
 .cv-item {
@@ -150,7 +157,7 @@ a:hover {
 footer {
   margin-top: 1em;
   padding: 2em 0;
-  background-color: #f0f6fc;
+  background-color: var(--footer-bg-color);
   color: black;
   font-weight: bold;
   font-size: 1.5em;
@@ -161,8 +168,17 @@ footer ul {
   list-style: none;
 }
 
+footer li {
+  margin-top: 1em;
+}
+
 footer a {
   text-decoration: none;
+  color: var(--footer-links);
+}
+
+footer a:hover {
+  color: var(--footer-links-hover);
 }
 
 img {
@@ -193,6 +209,9 @@ img {
 
 /* tablet */
 @media screen and (min-width: 426px) {
+  main {
+    padding: 2.5%;
+  }
   #avatar {
     float: right;
     width: 45%;
@@ -201,7 +220,7 @@ img {
 }
 
 /* PC */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1100px) {
   html {
     scroll-padding-top: 1.5em;
   }
@@ -215,7 +234,7 @@ img {
     top: 0;
     left: 0;
     height: 100%;
-    min-width: 150px;
+    min-width: 200px;
     border: none;
     border-right: 1px solid var(--border-color);
   }
@@ -227,22 +246,24 @@ img {
   nav li {
     transition: 1s;
     border: none;
-    border-bottom: 1px solid var(--border-color);
+    /* border-bottom: 1px solid hsl(216, 28%, 12%); */
   }
 
   nav li:hover {
-    background-color: var(--main-color-hover);
+    background-color: var(--nav-color-hover);
     transition: 0.4s;
   }
 
   nav a {
     padding: 15px;
   }
+  main {
+    padding: 2.5%;
+  }
   main h2,
   main h3,
-  main > p,
-  div.note {
-    margin: 0.8em 2em;
+  main > p {
+    margin: 0.8em 5% 0;
   }
   main > p {
     text-indent: 3em;
@@ -260,6 +281,24 @@ img {
 
   #avatar:hover {
     transform: scale(1.1);
+  }
+
+  footer a {
+    position: relative;
+  }
+
+  footer a::before {
+    content: "\1F449";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -50px;
+    transition: 0.4s;
+  }
+
+  footer a:hover::before {
+    opacity: 1;
+    left: -40px;
   }
 
   #rsschool-logo {
