@@ -133,10 +133,12 @@ a:hover {
 }
 
 .note-header {
+  padding-left: 2em;
   color: var(--cv-items);
 }
 
 .note-text {
+  padding-left: 2em;
   font-size: 1.2em;
 }
 
