@@ -134,6 +134,7 @@ a:hover {
 
 .note-header {
   padding-left: 2em;
+  font-weight: bold;
   color: var(--cv-items);
 }
 
