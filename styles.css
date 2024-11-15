@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 20px;
+  scroll-padding-top: 3.4em;
 }
 
 * {
@@ -10,11 +10,6 @@ html {
 
   /* smooth scroll */
   scroll-behavior: smooth;
-}
-
-* :not(a) {
-  /* default cursor on text */
-  cursor: default;
 }
 
 /* color variables */
@@ -46,46 +41,37 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  font-size: 1.25em;
-  line-height: 1.8em;
-}
-
-.centered {
-  margin: auto;
-  width: 70%;
+  font-size: 1.2em;
+  line-height: 2em;
 }
 
 header {
   text-align: center;
-  margin: 2em 0;
-  min-width: 720px;
+  margin: 2em auto;
 }
 
 nav {
-  border: 1px solid black;
-  overflow: auto;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  min-width: 150px;
   background-color: var(--main-color);
-  color: black;
-  border-right-color: var(--border-color);
+  position: sticky;
+  top: 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--border-color);
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 nav ul {
+  display: flex;
+  overflow: auto;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 nav li {
-  transition: 1s;
-  border-bottom: 1px solid var(--border-color);
+  transition: 0.4s;
+  border-right: 1px solid var(--border-color);
 }
 
 nav li:hover {
@@ -96,7 +82,7 @@ nav li:hover {
 nav a {
   text-decoration: none;
   display: block;
-  padding: 5px;
+  padding: 10px;
 }
 
 main {
@@ -104,18 +90,23 @@ main {
   border: 1px solid var(--border-color);
   border-radius: 6px;
 
-  padding: 50px;
-  min-width: 720px;
   overflow: hidden;
-}
-
-main * {
-  margin: 1em 0;
 }
 
 main h2 {
   display: inline-block;
   border-bottom: 2px solid var(--body-text);
+}
+
+main h2,
+main h3,
+p,
+.note {
+  margin: 0.4em 1em;
+}
+
+main > p {
+  text-indent: 1.4em;
 }
 
 main ul {
@@ -126,8 +117,8 @@ main .content {
   list-style: none;
 }
 
-main > ol > li::marker {
-  font-size: 1.5em;
+main li {
+  margin: 0.9em 1.8em;
 }
 
 a {
@@ -137,14 +128,16 @@ a {
 a:hover {
   color: var(--link-hover);
 }
-
 .note {
   border-left: 5px solid var(--cv-items);
-  padding-left: 20px;
 }
 
-.note h4 {
+.note-header {
   color: var(--cv-items);
+}
+
+.note-text {
+  font-size: 1.2em;
 }
 
 .cv-item {
@@ -152,14 +145,13 @@ a:hover {
 }
 
 footer {
-  margin-top: 40px;
-  padding: 40px;
+  margin-top: 1em;
+  padding: 2em 0;
   background-color: #f0f6fc;
   color: black;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  min-width: 720px;
 }
 
 footer a {
@@ -171,48 +163,101 @@ img {
 }
 
 #avatar {
-  float: right;
-  margin-left: 50px;
-}
-
-#avatar:hover {
-  transform: scale(1.1);
-}
-
-#rsschool-logo {
-  margin: 50px;
-  width: 10em;
+  display: block;
+  margin: 0.5em auto;
+  width: 90%;
+  border-radius: 50%;
 }
 
 #creation {
-  margin: 50px;
+  margin: 50px 0;
 }
 
-#rsschool-logo:hover {
-  transition: 1s;
-  transform: scale(1.2);
+#rsschool-logo {
+  width: 80%;
 }
 
-/* responsive */
-@media screen and (max-width: 1023px) {
-  html {
-    scroll-padding-top: 60px;
+/* for ultra small screens */
+@media screen and (max-width: 320px) {
+  main * {
+    word-break: break-word;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 426px) {
+  #avatar {
+    float: right;
+    width: 45%;
+    margin: 2em;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 769px) {
+  * :not(a) {
+    /* default cursor on text */
+    cursor: default;
   }
 
   nav {
-    position: sticky;
-    width: 100%;
-    min-width: 720px;
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: var(--border-color);
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-
-  nav > ul > li {
-    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-width: 150px;
     border: none;
     border-right: 1px solid var(--border-color);
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    transition: 1s;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  nav li:hover {
+    background-color: var(--main-color-hover);
+    transition: 0.4s;
+  }
+
+  nav a {
+    padding: 15px;
+  }
+  main h2,
+  main h3,
+  p,
+  div.note {
+    margin: 0.8em 2em;
+  }
+  main > p {
+    text-indent: 3em;
+  }
+
+  .centered {
+    margin: auto 20%;
+  }
+
+  #avatar {
+    float: right;
+    width: 30%;
+    margin: 2em;
+  }
+
+  #avatar:hover {
+    transform: scale(1.1);
+  }
+
+  #rsschool-logo {
+    width: 40%;
+  }
+
+  #rsschool-logo:hover {
+    transition: 1s;
+    transform: scale(1.1);
   }
 }
