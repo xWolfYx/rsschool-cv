@@ -113,6 +113,10 @@ main > p {
   text-align: justify;
 }
 
+main > p#edu {
+  text-indent: 0;
+}
+
 main ul {
   margin-left: 1.5em;
 }
