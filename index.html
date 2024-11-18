@@ -9,6 +9,18 @@
       type="image/x-icon"
       href="Profile_avatar_placeholder_large.png"
     >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
     <title>David Smith | CV</title>
   </head>
 
@@ -22,6 +34,7 @@
         <li><a href="#contact">Contact</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#proj">Projects</a></li>
+        <li><a href="#code-ex">Code Example</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#english">English</a></li>
       </ul>
@@ -93,6 +106,15 @@
         </li>
       </ul>
       <p>Also I have made a CV (this) project task for RSSchool.</p>
+      <h2 id="code-ex">Code Example In C Language</h2>
+      <pre>
+        <code>
+float l = (float) letters / words * 100;
+float s = (float) sentences / words * 100;
+float index = 0.0588 * l - 0.296 * s - 15.8;
+return round(index);
+      </code>
+      </pre>
       <h2 id="education">Education</h2>
       <p id="edu">
         2019 - 2024<br>
