@@ -1,15 +1,12 @@
 html {
   scroll-padding-top: 4em;
+  scroll-behavior: smooth;
 }
 
 * {
-  /* basic reset */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  /* smooth scroll */
-  scroll-behavior: smooth;
 }
 
 /* color variables */
@@ -30,8 +27,6 @@ html {
 
 body {
   background-color: var(--main-color);
-
-  /* font properties */
   color: var(--body-text);
   font-family:
     system-ui,
@@ -89,11 +84,13 @@ nav a {
 }
 
 main {
-  /* main borders */
   border: 1px solid var(--border-color);
   border-radius: 6px;
-
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
 }
 
 main h2 {
@@ -101,15 +98,15 @@ main h2 {
   border-bottom: 2px solid var(--body-text);
 }
 
-main h2,
-main h3,
-main > p,
-.note {
-  margin: 0.4em 5%;
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
 }
 
-main > p {
-  text-indent: 1.4em;
+section > p {
   text-align: justify;
 }
 
@@ -125,10 +122,6 @@ main .content {
   list-style: none;
 }
 
-main li {
-  margin: 0.9em 1.8em;
-}
-
 a {
   color: var(--links);
 }
@@ -137,21 +130,11 @@ a:hover {
   color: var(--link-hover);
 }
 
-.note {
-  margin: 2em;
-  border-left: 5px solid var(--cv-items);
-}
-
-.note-header {
-  padding-left: 1em;
-  font-weight: bold;
-  color: var(--cv-items);
-}
-
-.note-text {
-  padding: 0.5em 1em;
-  font-size: 1.2em;
-  text-align: justify;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 8px;
 }
 
 .cv-item {
@@ -159,8 +142,12 @@ a:hover {
 }
 
 footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
   margin-top: 1em;
-  padding: 2em 0;
+  padding: 20px;
   background-color: var(--footer-bg-color);
   color: black;
   font-weight: bold;
@@ -170,10 +157,6 @@ footer {
 
 footer ul {
   list-style: none;
-}
-
-footer li {
-  margin-top: 1em;
 }
 
 footer a {
@@ -196,15 +179,20 @@ img {
   border-radius: 50%;
 }
 
-#creation {
-  margin: 50px 0;
+.created {
+  font-size: 1.2rem;
+}
+
+.links {
+  display: flex;
+  gap: 50px;
+  margin-right: 5%;
 }
 
 #rsschool-logo {
-  width: 80%;
+  width: 100px;
 }
 
-/* for ultra small screens */
 @media screen and (max-width: 320px) {
   main * {
     word-break: break-word;
@@ -223,13 +211,18 @@ img {
   }
 }
 
-/* PC */
+@media screen and (max-width: 485px) {
+  footer {
+    flex-flow: column;
+  }
+}
+
 @media screen and (min-width: 1100px) {
   html {
     scroll-padding-top: 1.5em;
   }
+
   * :not(a) {
-    /* default cursor on text */
     cursor: default;
   }
 
@@ -250,7 +243,6 @@ img {
   nav li {
     transition: 1s;
     border: none;
-    /* border-bottom: 1px solid hsl(216, 28%, 12%); */
   }
 
   nav li:hover {
@@ -264,15 +256,6 @@ img {
   main {
     padding: 2.5%;
   }
-  main h2,
-  main h3,
-  main > p {
-    margin: 0.8em 5% 0;
-  }
-  main > p {
-    text-indent: 3em;
-  }
-
   .centered {
     margin: auto 20%;
   }
@@ -280,7 +263,7 @@ img {
   #avatar {
     float: right;
     width: 30%;
-    margin: 2em;
+    margin-left: auto;
   }
 
   #avatar:hover {
@@ -304,18 +287,8 @@ img {
     opacity: 1;
     left: -40px;
   }
-
-  #rsschool-logo {
-    width: 40%;
-  }
-
-  #rsschool-logo:hover {
-    transition: 1s;
-    transform: scale(1.1);
-  }
 }
 
-/* bigger screen size */
 @media screen and (min-width: 1921px) {
   html {
     font-size: 1.8em;
